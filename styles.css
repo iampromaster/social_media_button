@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e6cdea;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.social-media-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.social-media-container h2 {
+  color: #2e3749;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.border {
+  width: 120px;
+  height: 3px;
+  position: relative;
+}
+.border::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  background-color: #2e3749;
+  transition: 0.3s linear;
+}
+.social-media-container:hover .border::before {
+  width: 100%;
+}
+.social-media-buttons a {
+  display: inline-block;
+  color: #2e3749;
+  font-size: 24px;
+  margin-right: 20px;
+  pointer-events: none;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.social-media-buttons a:nth-child(odd){
+  transform: translateY(-40px)
+}
+.social-media-buttons a:nth-child(even){
+  transform: translateY(40px)
+}
+.social-media-container:hover .social-media-buttons a {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.social-media-buttons a {
+  transition: .2s linear;
+}
+.fa-facebook-f:hover {
+  color: #1b74e4;
+}
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+.fa-instagram:hover {
+  color: #c32aa3;
+}
+.fa-linkedin-in:hover {
+  color: #0a66c2;
+}
+.fa-tiktok:hover {
+  color: #010101;
+}
